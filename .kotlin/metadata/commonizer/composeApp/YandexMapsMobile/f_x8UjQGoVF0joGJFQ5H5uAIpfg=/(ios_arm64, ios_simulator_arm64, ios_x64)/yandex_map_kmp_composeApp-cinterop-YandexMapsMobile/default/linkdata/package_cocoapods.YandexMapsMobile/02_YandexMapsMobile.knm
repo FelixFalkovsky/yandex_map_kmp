@@ -1,0 +1,1381 @@
+
+¶H
+	cocoapods
+YandexMapsMobile
+YMKLocationFilteringMode
+YMKLocationFilteringModeOff
+Var
+	Companion
+kotlinx
+cinterop
+CPrimitiveVar
+Type
+kotlin
+
+Deprecated
+message
+(Use sizeOf<T>() or alignOf<T>() instead.
+CEnumVar
+native
+internal
+	NativePtr
+rawPtr
+value
+Enum
+CEnum
+ULong
+platform
+darwin
+
+NSUInteger
+YMKLocationFilteringModeOn
+ExperimentalForeignApi
+YMKPolylinePositionMeta
+NSObjectMeta
+CPointer
+cnames
+structs
+_NSZone
+zone
+YMKPolylinePosition
+
+commonizer
+ObjCCallable
+
+ObjCMethod
+encoding
+@24@0:8^{_NSZone=}16
+selector
+allocWithZone:
+isStret
+)Use constructor or factory method instead
+allocWithZone
+@16@0:8
+new
+alloc
+segmentIndex
+Double
+segmentPosition
+@32@0:8Q16d24
+1polylinePositionWithSegmentIndex:segmentPosition:
+ polylinePositionWithSegmentIndex
+ExternalObjCClass
+YMKVisibleRegionUtilsMeta
+YMKVisibleRegionUtils
+YMKVisibleRegion
+visibleRegion
+YMKBoundingBox
+
+@24@0:8@16
+getBoundsWithVisibleRegion:
+getBoundsWithVisibleRegion
+YMKGeometry
+toPolygonWithVisibleRegion:
+toPolygonWithVisibleRegion
+YRTFlutterViewFactory
+YRTFlutterViewFactoryMeta
+ObjCClassOf
+NSObject
+ObjCConstructor
+initSelector
+init
+
+designated
+level
+DeprecationLevel
+ERROR
+Use constructor instead
+replaceWith
+ReplaceWith
+imports
+
+expression
+YRTFlutterViewFactory()
+CCall
+ConsumesReceiver
+ReturnsRetained
+YMKLogoMeta
+YMKLogo
+YRTUnauthorizedError
+YRTUnauthorizedErrorMeta
+YRTRemoteError
+YRTUnauthorizedError()
+YMKRoadEventsManagerMeta
+YMKRoadEventsManager
+YMKGeoObjectTagsMeta
+YMKBaseMetadataProtocolMeta
+YMKGeoObjectTags
+collections
+List
+tags
+geoObjectTagsWithTags:
+geoObjectTagsWithTags
+YRTNotFoundErrorMeta
+YRTRemoteErrorMeta
+YRTNotFoundError
+YMKMapObjectMeta
+YMKMapObject
+	YMKMapKit
+YMKMapKitMeta
+YMKMapWindow
+	mapWindow
+YMKTrafficLayer
+ createTrafficLayerWithMapWindow:
+createTrafficLayerWithMapWindow
+YMKOfflineCacheManager
+offlineCacheManager
+YMKLocationManager
+locationManager
+Unit
+
+v24@0:8@16
+&setLocationManagerWithLocationManager:
+%setLocationManagerWithLocationManager
+YMKMapKit()
+v16@0:8
+onStart
+String
+version
+YMKStorageManager
+storageManager
+key
+setApiKeyWithKey:
+setApiKeyWithKey
+	objcnames
+	protocols
+YRTPlatformViewProtocol
+platformView
+Float
+customScaleFactor
+@28@0:8@16f24
+2createMapWindowWithPlatformView:customScaleFactor:
+createMapWindowWithPlatformView
+YRTLocationActivityType
+activityType
+
+@24@0:8Q16
+&createLocationManagerWithActivityType:
+%createLocationManagerWithActivityType
+resetLocationManagerToDefault
+Boolean
+B16@0:8
+isValid
+id
+setUserIdWithId:
+setUserIdWithId
+ createMapWindowWithPlatformView:
+onStop
+YMKLocationSimulator
+createLocationSimulator
+YMKDummyLocationManager
+createDummyLocationManager
+createLocationManager
+YMKPolyline
+geometry
+$createLocationSimulatorWithGeometry:
+#createLocationSimulatorWithGeometry
+YMKUserLocationLayer
+%createUserLocationLayerWithMapWindow:
+$createUserLocationLayerWithMapWindow
+valid
+YRTCanonicalUnit
+YRTCanonicalUnitMeta
+YRTCanonicalUnit()
+unit
+d16@0:8
+YMKImagesDefaultUrlProviderMeta
+%YMKImagesImageUrlProviderProtocolMeta
+YMKImagesDefaultUrlProvider
+#YMKStorageErrorListenerProtocolMeta
+NSObjectProtocolMeta
+YMKOfflineCacheRegion
+YMKOfflineCacheRegionMeta
+YMKOfflineCacheRegion()
+Q16@0:8
+
+Foundation
+NSNumber
+parentId
+country
+YMKLocalizedValue
+size
+name
+NSDate
+releaseTime
+YMKPoint
+center
+YMKTilesDefaultUrlProviderMeta
+YMKTilesUrlProviderProtocolMeta
+YMKTilesDefaultUrlProvider
+YMKLocationSimulatorMeta
+polylinePosition
+YMKLocationSimulator()
+speed
+isActive
+YMKSimulationAccuracy
+simulationAccuracy
+
+v24@0:8Q16
+&startSimulationWithSimulationAccuracy:
+%startSimulationWithSimulationAccuracy
+$YMKLocationSimulatorListenerProtocol
+simulatorListener
+1subscribeForSimulatorEventsWithSimulatorListener:
+0subscribeForSimulatorEventsWithSimulatorListener
+provide
+
+v20@0:8B16
+%setLocationSpeedProvidingWithProvide:
+$setLocationSpeedProvidingWithProvide
+
+v24@0:8d16
+	setSpeed:
+setSpeed
+4unsubscribeFromSimulatorEventsWithSimulatorListener:
+3unsubscribeFromSimulatorEventsWithSimulatorListener
+stopSimulation
+setGeometry:
+setGeometry
+active
+)YMKLayersGeoObjectTapListenerProtocolMeta
+YMKJamTypeColor
+YMKJamTypeColorMeta
+
+YMKJamType
+jamType
+YMKJamTypeColor()
+UIKit
+UIColor
+jamColor
+YRTLifecycleProviderProtocol
+
+ObjCObject
+reset
+YRTLifecycleListenerProtocol
+listener
+setListener:
+setListener
+YMKGeoObjectCollectionMeta
+YMKGeoObjectCollection
+boundingBox
+YRTTypeDictionary
+metadataContainer
+children
+@40@0:8@16@24@32
+>geoObjectCollectionWithBoundingBox:metadataContainer:children:
+"geoObjectCollectionWithBoundingBox
+
+YMKPolygon
+YMKPolygonMeta
+YMKLinearRing
+	outerRing
+YMKPolygon()
+
+innerRings
+#YMKPersonalizedPoiExtraMetadataMeta
+YMKPersonalizedPoiExtraMetadata
+data
+%personalizedPoiExtraMetadataWithData:
+$personalizedPoiExtraMetadataWithData
+YMKMapObjectVisitorProtocol
+NSObjectProtocol
+YMKMapObjectCollection
+
+collection
+
+B24@0:8@16
+%onCollectionVisitStartWithCollection:
+$onCollectionVisitStartWithCollection
+YMKCircleMapObject
+circle
+onCircleVisitedWithCircle:
+onCircleVisitedWithCircle
+!YMKClusterizedPlacemarkCollection
+0onClusterizedCollectionVisitStartWithCollection:
+/onClusterizedCollectionVisitStartWithCollection
+YMKPlacemarkMapObject
+	placemark
+ onPlacemarkVisitedWithPlacemark:
+onPlacemarkVisitedWithPlacemark
+YMKPolylineMapObject
+polyline
+onPolylineVisitedWithPolyline:
+onPolylineVisitedWithPolyline
+#onCollectionVisitEndWithCollection:
+"onCollectionVisitEndWithCollection
+YMKPolygonMapObject
+polygon
+onPolygonVisitedWithPolygon:
+onPolygonVisitedWithPolygon
+.onClusterizedCollectionVisitEndWithCollection:
+-onClusterizedCollectionVisitEndWithCollection
+YMKTaxiMoney
+YMKTaxiMoneyMeta
+YMKTaxiMoney()
+text
+currency
+YMKUserLocationLayerMeta
+!YRTRequestEntityTooLargeErrorMeta
+YRTRequestEntityTooLargeError
+YMKCircleMapObjectMeta
+
+YMKMapMeta
+YMKMap
+YMKMapWindowMeta
+YMKPolylineIndex
+YMKPolylineIndexMeta
+point
+YMKPolylineIndexPriority
+priority
+maxLocationBias
+@40@0:8@16Q24d32
+:closestPolylinePositionWithPoint:priority:maxLocationBias:
+ closestPolylinePositionWithPoint
+YMKPolylineIndex()
+positionFrom
+
+positionTo
+@48@0:8@16@24@32d40
+IclosestPolylinePositionWithPoint:positionFrom:positionTo:maxLocationBias:
+YMKRawTileMeta
+
+YMKRawTile
+
+YMKVersion
+Map
+Any
+features
+etag
+YMKRawTileUseCache
+useCache
+YMKRawTileState
+state
+NSData
+rawData
+@64@0:8@16@24@32Q40Q48@56
+8rawTileWithVersion:features:etag:useCache:state:rawData:
+rawTileWithVersion
+YRTGnssClockMeta
+YRTGnssClock
+Long
+	timeNanos
+timeUncertaintyNanos
+
+leapSecond
+fullBiasNanos
+	biasNanos
+biasUncertaintyNanos
+driftNanosPerSecond
+driftNanosUncertaintyPerSecond
+	NSInteger
+hardwareClockDiscontinuityCount
+"@88@0:8q16@24@32@40@48@56@64@72q80
+∑gnssClockWithTimeNanos:timeUncertaintyNanos:leapSecond:fullBiasNanos:biasNanos:biasUncertaintyNanos:driftNanosPerSecond:driftNanosUncertaintyPerSecond:hardwareClockDiscontinuityCount:
+gnssClockWithTimeNanos
+YRTI18nManagerFactory
+YRTI18nManagerFactoryMeta
+YRTI18nManagerFactory()
+
+YMKXYPoint
+YMKXYPointMeta
+YMKXYPoint()
+x
+y
+'YRTGnssMeasurementsEventsNativeListener
++YRTGnssMeasurementsEventsNativeListenerMeta
+)YRTGnssMeasurementsEventsNativeListener()
+YRTGnssMeasurementsEvent
+event
+!onGnssMeasurementsEventWithEvent:
+ onGnssMeasurementsEventWithEvent
+YMKRoutePosition
+YMKRoutePositionMeta
+YMKRoutePosition()
+another
+precedesOrEqualsWithAnother:
+precedesOrEqualsWithAnother
+timeToFinish
+precedesWithAnother:
+precedesWithAnother
+distance
+
+@24@0:8d16
+advanceWithDistance:
+advanceWithDistance
+routeId
+onRouteWithRouteId:
+onRouteWithRouteId
+heading
+to
+distanceToWithTo:
+distanceToWithTo
+distanceToFinish
+equalsWithAnother:
+equalsWithAnother
+positionOnRouteWithRouteId:
+positionOnRouteWithRouteId
+YMKZoomRangeMeta
+YMKZoomRange
+zMin
+zMax
+@32@0:8Q16Q24
+zoomRangeWithZMin:zMax:
+zoomRangeWithZMin
+YMKSubpolylineMeta
+YMKSubpolyline
+begin
+end
+@32@0:8@16@24
+subpolylineWithBegin:end:
+subpolylineWithBegin
+YMKAttributionAuthorMeta
+YMKAttributionAuthor
+uri
+email
+authorWithName:uri:email:
+authorWithName
+YRTI18nManager
+YRTI18nManagerMeta
+YRTTimeFormat
+
+timeFormat
+YRTI18nManager()
+YRTSystemOfMeasurement
+som
+dataSize
+
+@24@0:8q16
+localizeDataSizeWithDataSize:
+localizeDataSizeWithDataSize
+duration
+localizeDurationWithDuration:
+localizeDurationWithDuration
+canonicalUnit
+'localizeCanonicalUnitWithCanonicalUnit:
+&localizeCanonicalUnitWithCanonicalUnit
+localizeDistanceWithDistance:
+localizeDistanceWithDistance
+canonicalSpeedWithSpeed:
+canonicalSpeedWithSpeed
+localizeSpeedWithSpeed:
+localizeSpeedWithSpeed
+YRTI18nPrefs
+prefs
+	setPrefs:
+setPrefs
+setTimeFormat:
+setTimeFormat
+setSom:
+setSom
+YMKBoundingBoxMeta
+YMKBoundingBox()
+	northEast
+	southWest
+YRTViewProvider
+YRTViewProviderMeta
+UIView
+uIView
+	cacheable
+initWithUIView:cacheable:
+initWithUIView:
+YRTViewProvider()
+snapshot
+view
+@28@0:8@16B24
+ YRTViewProvider(view, cacheable)
+initWithUIView
+YRTViewProvider(view)
+YMKSubpolylineHelperMeta
+subpolyline
+$subpolylineWithPolyline:subpolyline:
+subpolylineWithPolyline
+d32@0:8@16@24
+*subpolylineLengthWithPolyline:subpolyline:
+subpolylineLengthWithPolyline
+YMKSubpolylineHelperÇ
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+	 
+
+
+
+ 
+ 
+
+
+
+ 
+ 
+
+ 
+ 
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+! 
+# 
+
+$
+% 
+& 
+
+2 
+7 
+8 
+9 
+: 
+< 
+@ 
+C 
+) 
+D 
+E 
+F 
+G 
+
+L 
+
+P 
+
+1T 
+2U 
+2V 
+W 
+X 
+Y 
+7 
+Z 
+[ 
+] 
+^ 
+_ 
+` 
+a 
+
+b
+@c 
+g 
+h 
+i 
+j 
+k 
+l 
+G 
+m 
+n 
+p 
+s 
+u 
+
+w 
+
+~ 
+Ä 
+Ö
+QÜ
+Rá 
+
+â 
+é 
+
+î 
+ú 
+û 
+° 
+• 
+© 
+[ 
+™ 
+Æ 
+Ø 
+∞ 
+± 
+≤ 
+≥ 
+c 
+¥ 
+∑
+f∏ 
+ª 
+fæ 
+¿ 
+¬ 
+√ 
+ƒ 
+W 
+≈ 
+  
+œ 
+‡ 
+· 
+s 
+‚ 
+„ 
+Ê
+wÁ 
+È 
+Í 
+Ï 
+ 
+Ò 
+Û 
+˘ 
+ 
+˙ 
+˚ 
+ˇ 
+Ä 
+Ñ 
+Ö 
+Ü 
+ã 
+è 
+í 
+ñ 
+ú 
+¢ 
+ç 
+£ 
+ß 
+® 
+© 
+™ 
+´ 
+¨ 
+≠ 
+Æ 
+ó 
+Ø 
+± 
+º 
+Ω 
+æ 
+@ø 
+
+¿ 
+√ 
+≈ 
+f« 
+Ã 
+Õ 
+
+Œ 
+◊ 
+‹ 
+ß 
+› 
+ﬂ 
+™ 
+‡ 
+‰ 
+≠ 
+Â 
+Á 
+Î 
+± 
+Ï 
+Ñ 
+Ö 
+ã 
+å 
+í 
+ì 
+ò 
+∫ 
+ô 
+ö 
+ù 
+Ø 
+' 
+∑ 
+ª 
+¬ 
+º 
+wΩ 
+… 
+– "	∆!20"á#20	“
+(",Ü  20:B
+0j`R08@XÜé"8á! 20020:R0j`8XñÑjj“
+"Øó 20BJS-02"
+00HóÄ“
+ “
+ !'(()(*+ “
+(,J4/0HóÄ“
+ “
+ !'(.)(/+ JC00HóÄ“
+ “
+ !'(.)(0+ “
+(,JF602
+10j`230"HóÄ“
+ “
+ !'(4)(5+ “
+#“
+"ﬂó $20BJS-0%2"
+00HóÄ“
+ “
+ !'(()(*+ “
+(,J4/0%HóÄ“
+ “
+ !'(.)(/+ JC00%HóÄ“
+ “
+ !'(.)(0+ “
+(,J:?0'2;0&HóÄ“
+ “
+ !'(=)(>+ J:B0(2;0&HóÄ“
+ “
+ !'(=)(A+ “
+#“
+"Ü#*20+20)0,"≥ó ) 20-:B “
+ “
+.H(IJJwI0)HóÄ“
+ “
+ !'(.)(I+ “
+6
+K
+0/8M(NOB0QR(S“
+3“
+4“
+#“
+"Áó 520BJS-062"
+00HóÄ“
+ “
+ !'(()(*+ “
+(,J4/06HóÄ“
+ “
+ !'(.)(/+ JC006HóÄ“
+ “
+ !'(.)(0+ “
+(,“
+#“
+"Ü#82092070,"≥ó 7 20::B “
+ “
+.H(IJJwI07HóÄ“
+ “
+ !'(.)(I+ “
+6
+K
+0/8M(NOB0QR(\“
+3“
+4“
+#“
+"Áó ;20BJS-0<2"
+00HóÄ“
+ “
+ !'(()(*+ “
+(,J4/0<HóÄ“
+ “
+ !'(.)(/+ JC00<HóÄ“
+ “
+ !'(.)(0+ “
+(,“
+#“
+"´ó =2020>BJS-0?2"
+00HóÄ“
+ “
+ !'(()(*+ “
+(,J4/0?HóÄ“
+ “
+ !'(.)(/+ JC00?HóÄ“
+ “
+ !'(.)(0+ “
+(,J>f0?2
+d0AHóÄ“
+ “
+ !'(=)(e+ “
+#“
+"Áó B20CBJS-0D2"
+00HóÄ“
+ “
+ !'(()(*+ “
+(,J4/0DHóÄ“
+ “
+ !'(.)(/+ JC00DHóÄ“
+ “
+ !'(.)(0+ “
+(,“
+#“
+"Áó E20BJS-0F2"
+00HóÄ“
+ “
+ !'(()(*+ “
+(,J4/0FHóÄ“
+ “
+ !'(.)(/+ JC00FHóÄ“
+ “
+ !'(.)(0+ “
+(,“
+#“
+"Ü#H20I20G0,"ø
+ó G 20-:B “
+ “
+.H(IJJ:r0K2o0JHóÄ“
+ “
+ !'(=)(q+ J2t0LHóÄ“
+ “
+ !'(.)(t+ J:z0N2v0MHóÄ“
+ “
+ !'(x)(y+ JwI0GHóÄ“
+ “
+ !'(.)(I+ “
+6
+K
+0/8M(NOB0QR({“
+3“
+4J2}0NHóÄ“
+ “
+ !'(|)(}+ J20OHóÄ“
+ “
+ !'(.)(+ J4Å0PHóÄ“
+ “
+!!'(.	)(Å+ J=Ñ0N2Ç0OHóÄ“
+ “
+!!'(x	)(É+ JGç0J2à0S2ä0THóÄ“
+ “
+"!	'(ã	)(å+ J>í0M2è0UHóÄ“
+ “
+"!	'(ê	)(ë+ J4ì0NHóÄ“
+ “
+!!'(|	)(ì+ J5ñ0VHóÄ“
+ “
+"!	'(ï	)(ñ+ J=ô0N2ó0OHóÄ“
+ “
+!!'(x	)(ò+ J=ç0J2à0SHóÄ“
+ “
+!!'(=	)(ö+ J4õ0NHóÄ“
+ “
+!!'(|	)(õ+ J4ù0WHóÄ“
+ “
+!!'(.	)(ù+ J4ü0XHóÄ“
+ “
+!!'(.	)(ü+ J4†0MHóÄ“
+ “
+!!'(.	)(†+ J=§0W2¢0YHóÄ“
+ “
+!!'(=	)(£+ J<ß0Z2o0JHóÄ“
+ “
+!!'(=	)(¶+ R®0V8XÜÑR0O8XÜÑRÅ0P8XÜÑRt0L8XÜÑ“
+#“
+"Ü#\20]20[0,"ºó [ 20-:B “
+ “
+.H(IJJxI0[HóÄ“
+ “
+ !'(.)(I+ “
+7
+K
+0/8M(NOB0Q	R(´“
+3“
+4J4¨0OHóÄ“
+ “
+!!'(.	)(¨+ J30"HóÄ“
+ “
+!!	'(≠)(+ R¨0O8XÜÑR0"8XÜÑ“
+#“
+"Îó ^2020_BJS-0`2"
+00HóÄ“
+ “
+ !'(()(*+ “
+(,J4/0`HóÄ“
+ “
+ !'(.)(/+ JC00`HóÄ“
+ “
+ !'(.)(0+ “
+(,“
+#“
+"Á a20b“
+"Ü#d20e20c0,"§ó c 20-:B “
+ “
+.H(IJJxI0cHóÄ“
+ “
+ !'(.)(I+ “
+7
+K
+0/8M(NOB0Q	R(µ“
+3“
+4J9ó0j`HóÄ“
+ “
+"!	'(∂	)(ó+ J6π0gHóÄ“
+ “
+!!'(.	)(π+ J4∫0OHóÄ“
+ “
+!!'(.	)(∫+ J4º0hHóÄ“
+ “
+!!'(.	)(º+ J4Ω0OHóÄ“
+ “
+!!'(.	)(Ω+ J4ø0iHóÄ“
+ “
+!!'(.	)(ø+ J4¡0jHóÄ“
+ “
+!!'(.	)(¡+ R¡0j8XÜÑR∫0O8XÜÑRπ0g8XÜÑRø0i8XÜÑRΩ0O8XÜÑRº0h8XÜÑRó0j`8XÜÑ“
+#“
+"Îó k2020lBJS-0m2"
+00HóÄ“
+ “
+ !'(()(*+ “
+(,J4/0mHóÄ“
+ “
+ !'(.)(/+ JC00mHóÄ“
+ “
+ !'(.)(0+ “
+(,“
+#“
+"Ü#n20o20W0,"¯ó W 20M:B “
+ “
+.H(IJJ4∆0HóÄ“
+ “
+!!'(.	)(∆+ JxI0WHóÄ“
+ “
+ !'(.)(I+ “
+7
+K
+0/8M(NOB0Q	R(«“
+3“
+4J5»0"HóÄ“
+ “
+"!	'(≠	)(»+ J5…0VHóÄ“
+ “
+"!	'(ï	)(…+ J>Œ0N2À0pHóÄ“
+ “
+"!	'(Ã	)(Õ+ J=“0N2–0qHóÄ“
+ “
+!!'(x	)(—+ J>÷0N2”0VHóÄ“
+ “
+"!	'(‘	)(’+ J>Ÿ0N2»0"HóÄ“
+ “
+"!	'(◊	)(ÿ+ J=€0N2–0qHóÄ“
+ “
+!!'(x	)(⁄+ J6¢0YHóÄ“
+ “
+!!'(.	)(¢+ J4‹0NHóÄ“
+ “
+!!'(|	)(‹+ J?ﬁ0N2	¢0YHóÄ“
+ “
+!!'(x	)(›+ R¢0Y8@XÜéRﬂ0V8XÜÑR»0"8@XÜé“
+#“
+"Á r20b“
+"Ü#t20u20s0,"øó s 20-:B “
+ “
+.H(IJJ5‰0vHóÄ“
+ “
+"!	'(∂	)(‰+ JxI0sHóÄ“
+ “
+ !'(.)(I+ “
+7
+K
+0/8M(NOB0Q	R(Â“
+3“
+4J4Ë0xHóÄ“
+ “
+!!'(.	)(Ë+ R‰0v8XÜÑRË0x8XÜÑ“
+#“
+"ºÁ y20zJ5…0VHßÄ“
+ “
+"!	'(ï	)(…+ J4Î0NHßÄ“
+ “
+!!'(|	)(Î+ J?Ô0N2	Ì0{HßÄ“
+ “
+!!'(x	)(Ó+ “
+"øó |20BJS-0}2"
+00HóÄ“
+ “
+ !'(()(*+ “
+(,J4/0}HóÄ“
+ “
+ !'(.)(/+ JC00}HóÄ“
+ “
+ !'(.)(0+ “
+(,JV¯0}2	Ú0'2Ù0~2ı0AHóÄ“
+ “
+"!	'(ˆ	)(˜+ “
+#“
+"Ü#Ä20Å200,"»ó  20-:B “
+ “
+.H(IJJ5¸0ÇHóÄ“
+ “
+!!'(.	)(¸+ JxI0HóÄ“
+ “
+ !'(.)(I+ “
+7
+K
+0/8M(NOB0Q	R(˝“
+3“
+4J8˛0AHóÄ“
+ “
+!!'(.	)(˛+ R¸0Ç8XÜÑR˛0A8XÜÑ“
+#“
+"≥ó É2020>BJT-0Ñ2"
+00HóÄ“
+ “
+ !'(()(*+ “
+(,J5/0ÑHóÄ“
+ “
+ !'(.)(/+ JD00ÑHóÄ“
+ “
+ !'(.)(0+ “
+(,JBÉ0Ñ2Å0AHóÄ“
+ “
+!!'(=	)(Ç+ “
+#“
+"íÁ Ö20ÜJ?ä0V2á0áHßÄ“
+ “
+"!	'(à	)(â+ J>é0N2å0àHßÄ“
+ “
+!!'(x	)(ç+ J?ë0V2á0âHßÄ“
+ “
+"!	'(à	)(ê+ J>ï0N2ì0äHßÄ“
+ “
+!!'(x	)(î+ J>ô0N2ó0ãHßÄ“
+ “
+!!'(x	)(ò+ J>õ0N2á0áHßÄ“
+ “
+!!'(x	)(ö+ J>ü0N2ù0åHßÄ“
+ “
+!!'(x	)(û+ J>°0N2á0âHßÄ“
+ “
+!!'(x	)(†+ “
+"Ü#é20è2	0ç0,"Éó ç 20-:B “
+ “
+.H(IJJyI0çHóÄ“
+ “
+ !'(.)(I+ “
+7
+K
+0/8M(NOB0Q	R(§“
+3“
+4J4•0OHóÄ“
+ “
+!!'(.	)(•+ J30"HóÄ“
+ “
+!!	'(≠)(+ J4¶0OHóÄ“
+ “
+!!'(.	)(¶+ R•0O8XÜÑR¶0O8XÜÑR0"8XÜÑ“
+#“
+"Ëó ê20BJS-0Z2"
+00HóÄ“
+ “
+ !'(()(*+ “
+(,J4/0ZHóÄ“
+ “
+ !'(.)(/+ JC00ZHóÄ“
+ “
+ !'(.)(0+ “
+(,“
+#“
+"Îó ë20CBJT-0í2"
+00HóÄ“
+ “
+ !'(()(*+ “
+(,J5/0íHóÄ“
+ “
+ !'(.)(/+ JD00íHóÄ“
+ “
+ !'(.)(0+ “
+(,“
+#“
+"Îó ì20EBJT-0à2"
+00HóÄ“
+ “
+ !'(()(*+ “
+(,J5/0àHóÄ“
+ “
+ !'(.)(/+ JD00àHóÄ“
+ “
+ !'(.)(0+ “
+(,“
+#“
+"Îó î20BJT-0ï2"
+00HóÄ“
+ “
+ !'(()(*+ “
+(,J5/0ïHóÄ“
+ “
+ !'(.)(/+ JD00ïHóÄ“
+ “
+ !'(.)(0+ “
+(,“
+#“
+"Ëó ñ20BJS-0J2"
+00HóÄ“
+ “
+ !'(()(*+ “
+(,J4/0JHóÄ“
+ “
+ !'(.)(/+ JC00JHóÄ“
+ “
+ !'(.)(0+ “
+(,“
+#“
+"Ü#ò20ô2	0ó0,"Ëó ó 20-:B “
+ “
+.H(IJJS∂02∞0j2≤0ö2≥0"HóÄ“
+ “
+"!	'(¥	)(µ+ JyI0óHóÄ“
+ “
+ !'(.)(I+ “
+7
+K
+0/8M(NOB0Q	R(∑“
+3“
+4J[∂02∞0j2∏02π02≥0"HóÄ“
+ “
+"!	'(∫	)(ª+ “
+#“
+"Íó õ20BJT-0ú2"
+00HóÄ“
+ “
+ !'(()(*+ “
+(,J}À0ú20ù2¡0ü0û2¬0O2ƒ0†2∆0°2»0¢HóÄ“
+ “
+"!	'(…	)( + J5/0úHóÄ“
+ “
+ !'(.)(/+ JD00úHóÄ“
+ “
+ !'(.)(0+ “
+(,“
+#“
+"äó £20BJT-0§2"
+00HóÄ“
+ “
+ !'(()(*+ “
+(,J5/0§HóÄ“
+ “
+ !'(.)(/+ JD00§HóÄ“
+ “
+ !'(.)(0+ “
+(,Jú€0§2œ0•2	–0g2	—0g2	“0g2	”0g2	‘0g2	’0g2	÷0g2ÿ0•j`¶HóÄ“
+ “
+"!	'(Ÿ	)(⁄+ “
+#“
+"Ü#®20©2	0ß0,"∂ó ß 20-:B “
+ “
+.H(IJJyI0ßHóÄ“
+ “
+ !'(.)(I+ “
+7
+K
+0/8M(NOB0Q	R(ﬁ“
+3“
+4“
+#“
+"Ü#´20¨2	0™0,"¬ó ™ 20-:B “
+ “
+.H(IJJyI0™HóÄ“
+ “
+ !'(.)(I+ “
+7
+K
+0/8M(NOB0Q	R(·“
+3“
+4J5‚0"HóÄ“
+ “
+"!	'(≠	)(‚+ J5„0"HóÄ“
+ “
+"!	'(≠	)(„+ R„0"8XÜÑR‚0"8XÜÑ“
+#“
+"Ü#Æ20Ø2	0≠0,"ˆó ≠ 20-:B “
+ “
+.H(IJJyI0≠HóÄ“
+ “
+ !'(.)(I+ “
+7
+K
+0/8M(NOB0Q	R(Ê“
+3“
+4J>Í0N2Ë0∞HóÄ“
+ “
+!!'(x	)(È+ “
+#“
+"Ü#≤20≥2	0±0,"Áó ± 20-:B “
+ “
+.H(IJJ4∞0jHóÄ“
+ “
+!!'(.	)(∞+ JyI0±HóÄ“
+ “
+ !'(.)(I+ “
+7
+K
+0/8M(NOB0Q	R(Ì“
+3“
+4J?0V2Ó0±HóÄ“
+ “
+"!	'(à	)(Ô+ J5Ò0"HóÄ“
+ “
+"!	'(≠	)(Ò+ J?Û0V2Ó0±HóÄ“
+ “
+"!	'(à	)(Ú+ J?˜0±2Ù0"HóÄ“
+ “
+"!	'(ı	)(ˆ+ J>˙0V2¯0OHóÄ“
+ “
+"!	'(à	)(˘+ J5˚0"HóÄ“
+ “
+"!	'(≠	)(˚+ J@˛0g2¸0±HóÄ“
+ “
+!!'(=	)(˝+ J5ˇ0"HóÄ“
+ “
+"!	'(≠	)(ˇ+ J?Å0V2Ó0±HóÄ“
+ “
+"!	'(à	)(Ä+ J?É02¯0OHóÄ“
+ “
+!!'(=	)(Ç+ R∞0j8XÜÑ“
+#“
+"Ωó ¥20BJT-0µ2"
+00HóÄ“
+ “
+ !'(()(*+ “
+(,J5/0µHóÄ“
+ “
+ !'(.)(/+ JD00µHóÄ“
+ “
+ !'(.)(0+ “
+(,JPä0µ2Ü0j`2á0j`HóÄ“
+ “
+"!	'(à	)(â+ “
+#“
+"µó ∂20BJT-0∑2"
+00HóÄ“
+ “
+ !'(()(*+ “
+(,J5/0∑HóÄ“
+ “
+ !'(.)(/+ JD00∑HóÄ“
+ “
+ !'(.)(0+ “
+(,JHë0∑2ç02é0HóÄ“
+ “
+"!	'(è	)(ê+ “
+#“
+"¬ó ∏20BJT-0π2"
+00HóÄ“
+ “
+ !'(()(*+ “
+(,J5/0πHóÄ“
+ “
+ !'(.)(/+ JD00πHóÄ“
+ “
+ !'(.)(0+ “
+(,JUó0π2Ω0O2	î0O2	ï0OHóÄ“
+ “
+"!	'(ˆ	)(ñ+ “
+#“
+"Ü#ª20º2	0∫0,"ßó ∫ 20-:B “
+ “
+.H(IJJ6õ0ΩHóÄ“
+ “
+"!	'(∂	)(õ+ JyI0∫HóÄ“
+ “
+ !'(.)(I+ “
+7
+K
+0/8M(NOB0Q	R(ú“
+3“
+4J6û0æHóÄ“
+ “
+"!	'(∂	)(û+ J?¢0O2ü0•HóÄ“
+ “
+"!	'(†	)(°+ JD•0O2£0•j`¶HóÄ“
+ “
+"!	'(†	)(§+ J=®0O2¶0[HóÄ“
+ “
+!!'(=	)(ß+ JD™0O2Ù0•j`¶HóÄ“
+ “
+"!	'(†	)(©+ J>¨0[2»0"HóÄ“
+ “
+"!	'(ı	)(´+ J5ñ0VHóÄ“
+ “
+"!	'(ï	)(ñ+ J>Æ0O2»0"HóÄ“
+ “
+"!	'(ı	)(≠+ J>≤0N2∞0øHóÄ“
+ “
+!!'(x	)(±+ J5∞0øHóÄ“
+ “
+!!'(.	)(∞+ J?¥0N2õ0ΩHóÄ“
+ “
+"!	'(Ã	)(≥+ J?∂0N2û0æHóÄ“
+ “
+"!	'(Ã	)(µ+ R®0V8XÜÑRû0æ8@XÜéR∞0ø8@XÜéRõ0Ω8@XÜé“
+#“
+"Ü#¿20¡20'0,"æó ' 20-:B “
+ “
+.H(IJJxI0'HóÄ“
+ “
+ !'(.)(I+ “
+7
+K
+0/8M(NOB0Q	R(∏“
+3“
+4J4π0jHóÄ“
+ “
+!!'(.	)(π+ J4∫0jHóÄ“
+ “
+!!'(.	)(∫+ R∫0j8XÜÑRπ0j8XÜÑ“
+#“
+"Ü#√20ƒ2	0¬0,"∑ó ¬ 20-:B6
+æ0≈ø0V“
+ “
+.	H(¿JB “
+ “
+.H(IJB-
+æ0≈“
+ “
+.	H(¡JJyI0¬HóÄ“
+ “
+ !'(.)(I+ “
+7
+K
+0/8M(NOB0Q	R(¬“
+3“
+4J4√0NHóÄ“
+ “
+!!'(|	)(√+ Jë«0ü2
+ƒ0≈2ø0VHóÄ“
+ “
+"!	'(≈	)(¿+ “
+7
+K
+0/8M(NOB0Q	R(∆“
+3“
+4J5ø0VHóÄ“
+ “
+"!	'(ï	)(ø+ Já«0ü2
+ƒ0≈HóÄ“
+ “
+!!'(=	)(¡+ “
+7
+K
+0/8M(NOB0Q	R(»“
+3“
+4Rø0V8XÜÑ“
+#“
+"ˇó ∆20BJHÃ0Y2ó0Y2 0∑HóÄ“
+ “
+"!	'(è	)(À+ JHœ0"2ó0Y2 0∑HóÄ“
+ “
+"!	'(Õ	)(Œ+ JT-0«2"
+00HóÄ“
+ “
+ !'(()(*+ “
+(,J5/0«HóÄ“
+ “
+ !'(.)(/+ JD00«HóÄ“
+ “
+ !'(.)(0+ “
+(,“
+#“
+‡
+ Í
+cocoapods.YandexMapsMobileÚ
+_$*)587;=BEHG\[^adcknWrtsy|ÄÉÖéçêëìîñòóõ£®ß´™Æ≠≤±¥∂∏ª∫¿'√¬∆
