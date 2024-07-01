@@ -7,19 +7,13 @@ plugins {
 }
 
 kotlin {
+
+    iosArm64()
+    iosX64()
+    iosSimulatorArm64()
+
     androidTarget {
 
-    }
-
-    listOf(
-        iosArm64(),
-        iosX64(),
-        iosSimulatorArm64()
-    ).forEach {
-        it.binaries.framework {
-            baseName = "ComposeApp"
-            isStatic = true
-        }
     }
 
     cocoapods {
@@ -31,6 +25,12 @@ kotlin {
         pod("YandexMapsMobile") {
             version = "4.6.1-lite"
         }
+        framework {
+            baseName = "composeApp"
+            isStatic = true
+            export(libs.arkivanov.decompose)
+            export(libs.arkivanov.essenty.lifecycle)
+        }
     }
     
     sourceSets {
@@ -39,10 +39,18 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.foundation)
             implementation(compose.material)
+
+            implementation(libs.arkivanov.decompose)
+            implementation(libs.arkivanov.decompose.extensions.compose)
+
+            // Decompose
+            api(libs.arkivanov.decompose)
+            api(libs.arkivanov.essenty.lifecycle)
         }
 
         androidMain.dependencies {
             implementation(libs.androidx.activity.compose)
+            implementation(libs.yandex.map.mobile)
         }
     }
 }

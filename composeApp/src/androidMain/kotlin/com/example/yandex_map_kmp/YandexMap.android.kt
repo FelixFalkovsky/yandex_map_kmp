@@ -7,7 +7,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.viewinterop.AndroidView
 
 @Composable
-actual fun MapScreen() {
+actual fun MapContent(places: List<PlaceMarkModel>) {
 
     AndroidView(
         modifier = Modifier.fillMaxSize(),
