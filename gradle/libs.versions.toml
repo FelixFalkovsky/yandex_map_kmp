@@ -16,6 +16,10 @@ androidx-activityCompose = "1.9.0"
 yandexMapsMobile = "4.6.1-lite"
 runtimeAndroid = "1.6.8"
 
+# ArkIvanov
+arkivanov-decompose = "3.0.0"
+arkivanov-essenty = "2.0.0"
+
 [libraries]
 plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 plugin-android = { module = "com.android.tools.build:gradle", version.ref = "plugin-android" }
@@ -36,6 +40,12 @@ yandex-map-mobile = { module = "com.yandex.android:maps.mobile", version.ref = "
 
 #AndroidX
 androidx-runtime-android = { group = "androidx.compose.runtime", name = "runtime-android", version.ref = "runtimeAndroid" }
+
+# ArkIvanov
+arkivanov-decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "arkivanov-decompose" }
+arkivanov-decompose-extensions-compose = { module = "com.arkivanov.decompose:extensions-compose", version.ref = "arkivanov-decompose" }
+arkivanov-essenty-lifecycle = { module = "com.arkivanov.essenty:lifecycle", version.ref = "arkivanov-essenty" }
+arkivanov-essenty-lifecycle-coroutines = { module = "com.arkivanov.essenty:lifecycle-coroutines", version.ref = "arkivanov-essenty" }
 
 [plugins]
 android = { id = "com.android.application", version.ref = "plugin-android" }

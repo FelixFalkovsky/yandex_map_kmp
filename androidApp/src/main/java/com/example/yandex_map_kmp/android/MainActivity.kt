@@ -3,26 +3,31 @@ package com.example.yandex_map_kmp.android
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.yandex_map_kmp.Greeting
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.sp
+import com.yandex.mapkit.MapKitFactory
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MyApplicationTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    GreetingView(Greeting().greet())
-                }
+            Surface(
+                Modifier.fillMaxSize(),
+                contentColor = Color.LightGray,
+                color = Color.DarkGray
+            ){
+                Text("Hello METANIT.COM", fontSize = 28.sp)
             }
         }
+
+        MapKitFactory.setApiKey("API_KEY")
+        MapKitFactory.setLocale("ru_RU")
     }
 }
 
