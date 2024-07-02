@@ -1,12 +1,13 @@
 package com.example.yandex_map_kmp
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.Text
+
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.Button
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+
 
 @Composable
 expect fun MapContent(places: List<PlaceMarkModel>)
@@ -15,9 +16,20 @@ expect fun MapContent(places: List<PlaceMarkModel>)
 fun MapScreen() {
 
     Row(
-
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(bottom = 120.dp)
+            .padding(horizontal = 16.dp)
+            .height(50.dp),
+        horizontalArrangement = Arrangement.SpaceAround,
+        verticalAlignment = Alignment.CenterVertically,
     ) {
-        
+        Button(
+            modifier = Modifier.fillMaxSize(),
+            onClick = { /* Action */ }
+        ) {
+
+        }
     }
 
     Box(
