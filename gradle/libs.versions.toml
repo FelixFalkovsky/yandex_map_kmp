@@ -2,12 +2,15 @@
 
 # Plugin
 plugin-android = "8.2.2"
-plugin-compose = "1.6.11"
+buildConfig = "4.1.1"
 
 # Multiplatform
 kotlin = "2.0.0"
 coroutines = "1.7.3"
 libres = "1.2.2"
+
+#Compose
+jb-compose = "1.6.11"
 
 #YandexMapsMobile
 yandexMapsMobile = "4.6.1-lite"
@@ -18,16 +21,14 @@ arkivanov-decompose = "3.0.0"
 arkivanov-essenty = "2.0.0"
 
 #AndroidX
-compose = "1.6.8"
-compose-material3 = "1.2.1"
+compose = "1.6.11"
+material3 = "1.2.1"
 androidx-activityCompose = "1.9.0"
+runtimeDesktop = "1.6.8"
 
 [libraries]
-plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 plugin-android = { module = "com.android.tools.build:gradle", version.ref = "plugin-android" }
-plugin-compose = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "plugin-compose" }
-plugin-serialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
-plugin-libres = { module = "io.github.skeptick.libres:gradle-plugin", version.ref = "libres" }
+plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
@@ -35,13 +36,16 @@ compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
 compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
-compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
 
 #Yandex
 yandex-map-mobile = { module = "com.yandex.android:maps.mobile", version.ref = "yandexMapsMobile" }
 
 #AndroidX
 androidx-runtime-android = { group = "androidx.compose.runtime", name = "runtime-android", version.ref = "runtimeAndroid" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "material3" }
+
+# Compose Multiplatform Plugin
+gradlePlugins-jb-compose = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "jb-compose" }
 
 # ArkIvanov
 arkivanov-decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "arkivanov-decompose" }
@@ -50,10 +54,11 @@ arkivanov-essenty-lifecycle = { module = "com.arkivanov.essenty:lifecycle", vers
 arkivanov-essenty-lifecycle-coroutines = { module = "com.arkivanov.essenty:lifecycle-coroutines", version.ref = "arkivanov-essenty" }
 
 [plugins]
-android = { id = "com.android.application", version.ref = "plugin-android" }
+android-application = { id = "com.android.application", version.ref = "plugin-android" }
 multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
-compose-core = { id = "org.jetbrains.compose", version.ref = "plugin-compose" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 libres = { id = "io.github.skeptick.libres", version.ref = "libres" }
+compose = { id = "org.jetbrains.compose", version.ref = "compose" }
 cocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
+buildConfig = { id = "com.github.gmazzo.buildconfig", version.ref = "buildConfig" }
