@@ -1,6 +1,3 @@
-rootProject.name = "yandex_map_kmp"
-include(":composeApp")
-
 pluginManagement {
     repositories {
         google()
@@ -17,3 +14,5 @@ dependencyResolutionManagement {
         maven("https://maven.pkg.jetbrains.space/public/p/ktor/eap")
     }
 }
+rootProject.name = "yandex_map_kmp"
+include(":composeApp")

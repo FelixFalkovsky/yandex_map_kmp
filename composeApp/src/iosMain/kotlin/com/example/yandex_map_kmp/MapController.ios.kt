@@ -8,20 +8,12 @@ import platform.UIKit.UIColor
 import platform.darwin.NSObject
 
 @OptIn(ExperimentalForeignApi::class)
-class MapController(
-    private var mapView: YMKMapView,
-    mapKit: YMKMapKit
-) : NSObject(),
-    YMKUserLocationObjectListenerProtocol,
-    YMKMapObjectTapListenerProtocol,
-    YMKClusterTapListenerProtocol,
-    YMKClusterListenerProtocol,
-    YMKMapObjectCollectionListenerProtocol,
-    YMKMapCameraListenerProtocol,
-    YMKLocationDelegateProtocol {
+class MapController : NSObject(), YMKUserLocationObjectListenerProtocol, YMKMapObjectTapListenerProtocol, YMKClusterTapListenerProtocol,
+    YMKClusterListenerProtocol, YMKMapObjectCollectionListenerProtocol, YMKMapCameraListenerProtocol, YMKLocationDelegateProtocol {
 
-    private val animation =
-        YMKAnimation.animationWithType(YMKAnimationType.YMKAnimationTypeSmooth, 2.0.toFloat())
+    private var mapKit: YMKMapKit = YMKMapKit()
+    private var mapView = YMKMapView()
+    private val animation = YMKAnimation.animationWithType(YMKAnimationType.YMKAnimationTypeSmooth, 2.0.toFloat())
     private var placesSymbols: HashMap<YMKPlacemarkMapObject, PlaceMarkModel> = HashMap()
     private var routeStartLocation: YMKPoint = YMKPoint.pointWithLatitude(0.0, 0.0)
     private var collection: YMKClusterizedPlacemarkCollection? = null
@@ -37,13 +29,18 @@ class MapController(
 
     init {
         mapView.mapWindow?.let {
-            collection =
-                it.map.mapObjects.addClusterizedPlacemarkCollectionWithClusterListener(this)
+            collection = it.map.mapObjects.addClusterizedPlacemarkCollectionWithClusterListener(this)
             it.map.mapObjects.addTapListenerWithTapListener(this)
             userLocationLayer = mapKit.createUserLocationLayerWithMapWindow(it)
             it.map.isRotateGesturesEnabled()
         }
         locationManager = mapKit.createLocationManager()
+    }
+
+    fun onStart() {
+        YMKMapKit.sharedInstance().onStart()
+        mapView = YMKMapView()
+        mapKit = YMKMapKit.mapKit()
     }
 
     fun onStop() {
@@ -117,7 +114,7 @@ class MapController(
         addedPlaceMarks.forEachIndexed { index, placeMark ->
             val placeMarkItem = places[index]
             placeMark.userData = placeMarkItem
-            placeMark.setIconWithImage(uiView("$index", 35.0, 35.0).asImage())
+            placeMark.setIconWithImage(uiView("$index", 35.0, 35.0, 12.0).asImage())
             placesSymbols[placeMark] = places[index]
         }
 
@@ -138,7 +135,8 @@ class MapController(
             uiView(
                 "${cluster.size}",
                 30.0,
-                30.0
+                30.0,
+                15.0
             ).asImage()
         )
         cluster.addClusterTapListenerWithClusterTapListener(this)

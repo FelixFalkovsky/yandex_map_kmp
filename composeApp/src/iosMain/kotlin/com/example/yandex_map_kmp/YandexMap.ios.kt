@@ -18,24 +18,24 @@ import platform.UIKit.UIView
 
 @OptIn(ExperimentalForeignApi::class)
 @Composable
-actual fun MapContent(places: List<PlaceMarkModel>) {
-
-    var mapKit by remember { mutableStateOf<YMKMapKit?>(null) }
-    var mapView by remember { mutableStateOf<YMKMapView?>(null) }
-    var mapController by remember { mutableStateOf<MapController?>(null) }
-
-    LaunchedEffect(places.isNotEmpty()) {
-        mapController?.addMarkersOnMap(places)
-    }
+actual fun MapContent(
+    places: List<PlaceMarkModel>,
+    userLocation: Boolean
+) {
 
     UIKitView(
         modifier = Modifier.fillMaxSize(),
         factory = {
-            YMKMapKit.sharedInstance().onStart()
-            mapView = YMKMapView()
-            mapKit = YMKMapKit.mapKit()
-            mapController = MapController(mapView!!, mapKit!!)
-            mapView!!
+            val mapView = MapController()
+            mapView.onStart()
+            mapView
+        },
+        update = { mapView ->
+            mapView.setUserLocation(userLocation)
+            mapView.addMarkersOnMap(places)
+        },
+        onRelease = { mapView ->
+            mapView.onStop()
         }
     )
 }
