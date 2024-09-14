@@ -2,22 +2,14 @@ package com.example.yandex_map_kmp
 
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import org.jetbrains.compose.resources.painterResource
 import yandex_map_kmp.composeapp.generated.resources.Res
 import yandex_map_kmp.composeapp.generated.resources.my_location
 
@@ -45,19 +37,19 @@ fun MapScreen() {
             horizontalArrangement = Arrangement.SpaceAround,
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            Button(
-                //modifier = Modifier.width(50.dp).height(60.dp),
-                shape = RoundedCornerShape(8.dp),
-                colors = ButtonDefaults.buttonColors(Color.Red),
-                onClick = { isUserLocation = true
-                }
-            ) {
-                Icon(
-                    painterResource(Res.drawable.my_location),
-                    contentDescription = null,
-                    modifier = Modifier.height(25.dp).width(25.dp)
-                )
-            }
+//            Button(
+//                modifier = Modifier.width(50.dp).height(60.dp),
+//                colors = ButtonDefaults.buttonColors(Color.Red),
+//                onClick = {
+//                    isUserLocation = true
+//                }
+//            ) {
+//                Icon(
+//                    painterResource(Res.drawable.my_location),
+//                    contentDescription = null,
+//                    modifier = Modifier.height(25.dp).width(25.dp)
+//                )
+//            }
         }
     }
 }
