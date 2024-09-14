@@ -1,5 +1,7 @@
-target 'iosApp' do
+target 'YandexMapKMP' do
   use_frameworks!
   platform :ios, '16.0'
   pod 'composeApp', :path => '../composeApp'
+  pod 'YandexMapsMobile', '4.6.1-lite'
+
 end
