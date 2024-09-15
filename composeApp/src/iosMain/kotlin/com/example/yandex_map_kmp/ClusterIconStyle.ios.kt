@@ -10,7 +10,7 @@ import platform.UIKit.UILabel
 import platform.UIKit.UIView
 
 @OptIn(ExperimentalForeignApi::class)
-fun uiView(name: String, with: Double, height: Double): UIView {
+fun uiView(name: String, with: Double, height: Double, cornerRadius: Double): UIView {
     val size = CGRectMake(0.0, 0.0, with, height)
 
     val text = UILabel(size)
@@ -22,7 +22,7 @@ fun uiView(name: String, with: Double, height: Double): UIView {
 
     val view = UIView(size)
     view.layer.backgroundColor = UIColor.redColor.CGColor
-    view.layer.cornerRadius = 12.0
+    view.layer.cornerRadius = cornerRadius
     view.translatesAutoresizingMaskIntoConstraints = true
 
     view.addSubview(text)

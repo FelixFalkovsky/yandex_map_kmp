@@ -4,46 +4,57 @@ import cocoapods.YandexMapsMobile.*
 import com.example.yandex_map_kmp.UIView.asImage
 import kotlinx.cinterop.ExperimentalForeignApi
 import platform.CoreGraphics.CGPointMake
+import platform.CoreGraphics.CGRectMake
 import platform.UIKit.UIColor
-import platform.darwin.NSObject
+import platform.UIKit.UIView
+
+private const val DEFAULT_CLUSTER_RADIUS = 42.0
+private const val DEFAULT_MIN_ZOOM = 35
+private const val COMFORTABLE_ZOOM_LEVEL = 15f
+private const val COMMON_ZOOM_LEVEL = 10f
+private const val DESIRED_ACCURACY = 0.0
+private const val MINIMAL_TIME: Long = 1000
+private const val MINIMAL_DISTANCE = 1.0
+private const val USE_IN_BACKGROUND = false
 
 @OptIn(ExperimentalForeignApi::class)
-class MapController(
-    private var mapView: YMKMapView,
-    mapKit: YMKMapKit
-) : NSObject(),
+class MapController : UIView(frame = CGRectMake(.0, .0, .0, .0)),
     YMKUserLocationObjectListenerProtocol,
     YMKMapObjectTapListenerProtocol,
     YMKClusterTapListenerProtocol,
     YMKClusterListenerProtocol,
     YMKMapObjectCollectionListenerProtocol,
     YMKMapCameraListenerProtocol,
-    YMKLocationDelegateProtocol {
+    YMKLocationDelegateProtocol
+{
 
-    private val animation =
-        YMKAnimation.animationWithType(YMKAnimationType.YMKAnimationTypeSmooth, 2.0.toFloat())
+    private val mapKit = YMKMapKit.mapKit()
+    private var mapView = YMKMapView()
+    private val animation = YMKAnimation.animationWithType(YMKAnimationType.YMKAnimationTypeSmooth, 2.0.toFloat())
     private var placesSymbols: HashMap<YMKPlacemarkMapObject, PlaceMarkModel> = HashMap()
-    private var routeStartLocation: YMKPoint = YMKPoint.pointWithLatitude(0.0, 0.0)
     private var collection: YMKClusterizedPlacemarkCollection? = null
     private var userLocationLayer: YMKUserLocationLayer? = null
     private var locationManager: YMKLocationManager? = null
     private var userLocationAccuracyCirceColor: Int? = null
     private var userLocationIconProvider: YRTViewProvider? = null
+    private var myLocation: YMKPoint? = null
 
     var clusterClick: ((IntArray) -> Unit)? = null
     var isUserLocationDisable: ((Boolean) -> Unit)? = null
 
-    private var followUserLocation = false
+    private var followUserLocation = true
 
     init {
+        addSubview(mapView)
+        locationManager = mapKit.createLocationManager()
         mapView.mapWindow?.let {
-            collection =
-                it.map.mapObjects.addClusterizedPlacemarkCollectionWithClusterListener(this)
-            it.map.mapObjects.addTapListenerWithTapListener(this)
             userLocationLayer = mapKit.createUserLocationLayerWithMapWindow(it)
             it.map.isRotateGesturesEnabled()
         }
-        locationManager = mapKit.createLocationManager()
+    }
+
+    fun onStart() {
+        YMKMapKit.sharedInstance().onStart()
     }
 
     fun onStop() {
@@ -53,33 +64,24 @@ class MapController(
     }
 
     /**
-     * Установить иконку отображения пользователя на карте
+     * Set the icon to display the user on the map
      */
     fun setUserLocation(enabled: Boolean) {
-        if (enabled) {
-            followUserLocation = true
-            userLocationLayer?.setVisibleWithOn(true)
-            userLocationLayer?.isHeadingEnabled()
-            userLocationLayer?.setObjectListenerWithObjectListener(this)
-            userLocationLayer?.isAnchorEnabled()
-            cameraUserPosition()
-            subscribeToLocationUpdate(true)
-        }
+        userLocationLayer?.setVisibleWithOn(enabled)
+        userLocationLayer?.setHeadingEnabled(enabled)
+        subscribeToLocationUpdate(enabled)
     }
 
-    private fun cameraUserPosition() {
-        if (userLocationLayer?.cameraPosition() != null) {
-            routeStartLocation = userLocationLayer?.cameraPosition()!!.target
-            moveTo(routeStartLocation)
-        }
+    //Move the focus to the user on the map
+    fun myLocation() {
+        val zoom = mapView.mapWindow?.map?.cameraPosition?.zoom ?: COMFORTABLE_ZOOM_LEVEL
+        moveTo(myLocation, zoom)
     }
 
     /**
-     * Создает метку локации пользователя
+     * Creates the user's location label
      */
     override fun onObjectAddedWithView(view: YMKUserLocationView) {
-        setAnchor()
-
         view.pin.useCompositeIcon()
 
         userLocationIconProvider?.let { imageProvider ->
@@ -94,7 +96,7 @@ class MapController(
     }
 
     /**
-     * Установить пины кластера на карту
+     * Install the cluster pins on the card
      */
     fun addMarkersOnMap(places: List<PlaceMarkModel>) {
         collection?.clear()
@@ -117,7 +119,7 @@ class MapController(
         addedPlaceMarks.forEachIndexed { index, placeMark ->
             val placeMarkItem = places[index]
             placeMark.userData = placeMarkItem
-            placeMark.setIconWithImage(uiView("$index", 35.0, 35.0).asImage())
+            placeMark.setIconWithImage(uiView("$index", 35.0, 35.0, 12.0).asImage())
             placesSymbols[placeMark] = places[index]
         }
 
@@ -131,29 +133,30 @@ class MapController(
     }
 
     /**
-     * Добавление жеста на класстер
+     * Adding a gesture to a cluster
      * */
     override fun onClusterAddedWithCluster(cluster: YMKCluster) {
         cluster.appearance.setIconWithImage(
             uiView(
                 "${cluster.size}",
                 30.0,
-                30.0
+                30.0,
+                15.0
             ).asImage()
         )
         cluster.addClusterTapListenerWithClusterTapListener(this)
     }
 
     /**
-     * Подписаться на обновление местоположения пользователя.
+     * Subscribe to update the user's location.
      */
     private fun subscribeToLocationUpdate(enabled: Boolean) {
         if (enabled) {
             locationManager?.subscribeForLocationUpdatesWithDesiredAccuracy(
-                0.0,
-                1000.0.toLong(),
-                1.0,
-                false,
+                DESIRED_ACCURACY,
+                MINIMAL_TIME,
+                MINIMAL_DISTANCE,
+                USE_IN_BACKGROUND,
                 YMKLocationFilteringMode.YMKLocationFilteringModeOff,
                 this
             )
@@ -179,17 +182,14 @@ class MapController(
         return true
     }
 
-    private fun moveTo(point: YMKPoint) {
-        mapView.mapWindow?.map?.moveWithCameraPosition(
-            YMKCameraPosition.cameraPositionWithTarget(
-                point,
-                12.toFloat(),
-                0.toFloat(),
-                0.toFloat()
-            ),
-            animation = animation,
-            cameraCallback = null
-        )
+    private fun moveTo(point: YMKPoint?, zoom: Float = COMFORTABLE_ZOOM_LEVEL) {
+        point?.let {
+            mapView.mapWindow?.map?.moveWithCameraPosition(
+                YMKCameraPosition.cameraPositionWithTarget(it, zoom, 0.0f, 0.0f),
+                animation,
+                null
+            )
+        }
     }
 
     override fun onCameraPositionChangedWithMap(
@@ -228,6 +228,6 @@ class MapController(
     override fun onLocationStatusUpdatedWithStatus(status: YMKLocationStatus) = Unit
 
     override fun onLocationUpdatedWithLocation(location: YMKLocation) {
-        routeStartLocation = location.position
+        myLocation = location.position
     }
 }

@@ -1,20 +1,29 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
-    alias(libs.plugins.android)
-    alias(libs.plugins.kotlin)
+    alias(libs.plugins.multiplatform)
     alias(libs.plugins.cocoapods)
-    alias(libs.plugins.compose.core)
     alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.compose)
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.buildConfig)
 }
 
 kotlin {
+    androidTarget {
+        compilations.all {
+            compileTaskProvider {
+                compilerOptions {
+                    jvmTarget.set(JvmTarget.JVM_1_8)
+                    freeCompilerArgs.add("-Xjdk-release=${JavaVersion.VERSION_1_8}")
+                }
+            }
+        }
+    }
 
     iosArm64()
     iosX64()
     iosSimulatorArm64()
-
-    androidTarget {
-
-    }
 
     cocoapods {
         summary = "Some description for the Shared Module"
@@ -36,12 +45,14 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             implementation(compose.runtime)
-            implementation(compose.ui)
             implementation(compose.foundation)
-            implementation(compose.material)
+            implementation(compose.material3)
+            implementation(compose.components.resources)
+            implementation(compose.components.uiToolingPreview)
 
             implementation(libs.arkivanov.decompose)
             implementation(libs.arkivanov.decompose.extensions.compose)
+
 
             // Decompose
             api(libs.arkivanov.decompose)
@@ -56,18 +67,27 @@ kotlin {
 }
 
 android {
-    namespace = "com.example.yandex_map_kmp"
+    namespace = "org.company.app"
     compileSdk = 34
-    defaultConfig {
-        minSdk = 28
-    }
 
-    buildFeatures {
-        compose = true
+    defaultConfig {
+        minSdk = 24
+        targetSdk = 34
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+    sourceSets["main"].apply {
+        manifest.srcFile("src/androidMain/AndroidManifest.xml")
+        res.srcDirs("src/androidMain/res")
     }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        //enables a Compose tooling support in the AndroidStudio
+        compose = true
     }
 }
