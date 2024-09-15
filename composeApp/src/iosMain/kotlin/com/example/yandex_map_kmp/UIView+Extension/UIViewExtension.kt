@@ -13,7 +13,7 @@ import platform.UIKit.UIView
 @OptIn(ExperimentalForeignApi::class)
 fun UIView.asImage(): UIImage {
     val renderer =
-        UIGraphicsImageRenderer(bounds = CGRectMake(0.0.toDouble(), 0.0.toDouble(), 50.0.toDouble(), 50.0.toDouble()))
+        UIGraphicsImageRenderer(bounds = CGRectMake(0.0, 0.0, 50.0, 50.0))
     return renderer.imageWithActions { rendererContext ->
         if (rendererContext != null) {
             layer.renderInContext(rendererContext.CGContext)

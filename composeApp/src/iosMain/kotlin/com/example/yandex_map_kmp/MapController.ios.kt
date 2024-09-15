@@ -67,15 +67,9 @@ class MapController : UIView(frame = CGRectMake(.0, .0, .0, .0)),
      * Set the icon to display the user on the map
      */
     fun setUserLocation(enabled: Boolean) {
-        if (enabled) {
-            followUserLocation = true
-            userLocationLayer?.setVisibleWithOn(true)
-            userLocationLayer?.isHeadingEnabled()
-            userLocationLayer?.setObjectListenerWithObjectListener(this)
-            userLocationLayer?.isAnchorEnabled()
-            myLocation()
-            subscribeToLocationUpdate(true)
-        }
+        userLocationLayer?.setVisibleWithOn(enabled)
+        userLocationLayer?.setHeadingEnabled(enabled)
+        subscribeToLocationUpdate(enabled)
     }
 
     //Move the focus to the user on the map
