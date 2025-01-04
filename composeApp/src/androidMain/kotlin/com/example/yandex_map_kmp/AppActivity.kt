@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.Composable
+import com.example.yandex_map_kmp.moko.mokoLocatioData
 import com.yandex.mapkit.MapKitFactory
 import org.jetbrains.compose.ui.tooling.preview.Preview
 

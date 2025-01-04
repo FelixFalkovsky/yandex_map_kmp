@@ -2,6 +2,7 @@ package com.example.yandex_map_kmp
 
 import cocoapods.YandexMapsMobile.*
 import com.example.yandex_map_kmp.UIView.asImage
+import com.example.yandex_map_kmp.moko.PlaceMarkModel
 import kotlinx.cinterop.ExperimentalForeignApi
 import platform.CoreGraphics.CGPointMake
 import platform.CoreGraphics.CGRectMake
@@ -63,6 +64,14 @@ class MapController : UIView(frame = CGRectMake(.0, .0, .0, .0)),
         YMKMapKit.sharedInstance().onStop()
     }
 
+    fun onMapObjectData(places: List<PlaceMarkModel>) {
+        addMarkersOnMap(places)
+        val point = places.elementAtOrNull(places.size / 2)?.let {
+            YMKPoint.pointWithLatitude(it.latitude, it.longitude)
+        }
+        moveTo(point, COMMON_ZOOM_LEVEL)
+    }
+
     /**
      * Set the icon to display the user on the map
      */
@@ -72,7 +81,10 @@ class MapController : UIView(frame = CGRectMake(.0, .0, .0, .0)),
         subscribeToLocationUpdate(enabled)
     }
 
-    //Move the focus to the user on the map
+
+    /**
+     * Move the focus to the user on the map
+     */
     fun myLocation() {
         val zoom = mapView.mapWindow?.map?.cameraPosition?.zoom ?: COMFORTABLE_ZOOM_LEVEL
         moveTo(myLocation, zoom)
@@ -98,38 +110,28 @@ class MapController : UIView(frame = CGRectMake(.0, .0, .0, .0)),
     /**
      * Install the cluster pins on the card
      */
-    fun addMarkersOnMap(places: List<PlaceMarkModel>) {
+    private fun addMarkersOnMap(
+        places: List<PlaceMarkModel>,
+        clusterRadius: Double = DEFAULT_CLUSTER_RADIUS,
+        minZoom: Int = DEFAULT_MIN_ZOOM
+    ) {
         collection?.clear()
 
-        val addedPlaceMarks: MutableList<YMKPlacemarkMapObject> = mutableListOf()
+        val clusterizedCollection = mapView.mapWindow?.map?.mapObjects?.addClusterizedPlacemarkCollectionWithClusterListener(this)
+        val addedPlaceMarks: List<YMKPlacemarkMapObject>? = clusterizedCollection
+                ?.addEmptyPlacemarksWithPoints(
+                    places.map { YMKPoint.pointWithLatitude(it.latitude, it.longitude) }
+                )?.filterIsInstance<YMKPlacemarkMapObject>()
 
-        places.forEachIndexed { _, placeMarkModel ->
-            collection?.let {
-                addedPlaceMarks.add(
-                    it.addPlacemarkWithPoint(
-                        YMKPoint.pointWithLatitude(
-                            placeMarkModel.latitude,
-                            placeMarkModel.longitude
-                        )
-                    )
-                )
-            }
-        }
-
-        addedPlaceMarks.forEachIndexed { index, placeMark ->
+        addedPlaceMarks?.forEachIndexed { index, placeMark ->
             val placeMarkItem = places[index]
             placeMark.userData = placeMarkItem
             placeMark.setIconWithImage(uiView("$index", 35.0, 35.0, 12.0).asImage())
             placesSymbols[placeMark] = places[index]
         }
 
-        // Устанавливаем позицию камеры по усредненным значениям
-        addedPlaceMarks.elementAtOrNull(places.size / 2)?.let {
-            moveTo(YMKPoint.pointWithLatitude(it.geometry.latitude, it.geometry.longitude))
-        }
-
-        collection?.addTapListenerWithTapListener(this)
-        collection?.clusterPlacemarksWithClusterRadius(60.0, 35.0.toULong())
+        clusterizedCollection?.clusterPlacemarksWithClusterRadius(clusterRadius, minZoom.toULong())
+        collection = clusterizedCollection
     }
 
     /**
