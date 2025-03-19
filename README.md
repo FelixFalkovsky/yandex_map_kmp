@@ -1,44 +1,70 @@
 # yandex_map_kmp
- 
-# YandexMap Integration
 
-This project includes an implementation of YandexMap using Kotlin Multiplatform, providing a seamless mapping experience across different platforms. Below are some key features and instructions on how to get started with it.
+# YandexMap for KotlinMultiplatform
+
+## Overview
+YandexMap is a powerful cross-platform mapping solution built with KotlinMultiplatform, providing seamless integration for both iOS and Android applications. The library offers advanced features including clustering support for efficient handling of multiple map markers.
 
 ## Features
+- 🗺️ Cross-platform implementation using KotlinMultiplatform
+- 📱 Native integration with UIKitView for iOS
+- 🤖 Native integration with AndroidView for Android
+- 📍 Marker clustering support
+- ⚡ High performance map rendering
+- 🔄 Smooth platform-specific implementations
 
-- **Kotlin Multiplatform**: Leverage the power of Kotlin to write shared code that targets multiple platforms.
-- **Clustering**: Efficiently manage and display a large number of markers on the map by grouping them into clusters, providing a cleaner and more user-friendly interface.
+## Platform-Specific Implementation
 
-## How to Use
+### iOS
+Seamlessly integrates with iOS using UIKitView, providing native performance and feel:
+```swift
+// Example usage in SwiftUI
+UIKitView(
+        modifier = Modifier.fillMaxSize(),
+        factory = {
+            val mapView = MapController()
+            mapView.onStart()
+            mapView
+        },
+        update = { mapView ->
+            mapView.setUserLocation(true)
+            mapView.addMarkersOnMap(places)
+        },
+        onRelease = { mapView ->
+            mapView.onStop()
+        }
+    )
+```
 
-1. **Setup**: Ensure you have all dependencies installed and properly configured for Kotlin Multiplatform support.
-   
-2. **Initialize the Map**: Use the provided API to initialize and display the YandexMap in your application view.
+### Android
+Efficiently implements using AndroidView for native Android experience:
+```kotlin
+// Example usage in Compose
+AndroidView(
+        modifier = Modifier.fillMaxSize(),
+        factory = { context ->
+            mapController = MapController(context)
+            mapController?.onStart()
+            mapController?.mapView!!
+        },
+        onRelease = {
+            mapController?.onStop()
+        }
+    ) {
+        /*Action*/
+    }
+```
 
-   ```kotlin
-   // Kotlin code snippet for initializing the map
-   val mapView = MapView(this)
-   mapView.initialize { map ->
-       // Additional map setup code here
-   }
-   ```
+## Clustering
+The library includes built-in clustering support, automatically grouping nearby markers for improved performance and visual clarity when dealing with large datasets.
 
-3. **Implement Clustering**: Take advantage of the clustering feature to manage and display a large set of map markers.
-   
-   ```kotlin
-   // Kotlin code snippet for adding clusters
-   val clusterManager = ClusterManager(mapView.context, mapView.map)
-   clusterManager.addItems(markers)
-   ```
+## Requirements
+- iOS 13.0+
+- Android API level 21+
+- Kotlin 1.8.0+
 
-## Contributions
-
-Feel free to contribute to this project by submitting pull requests or issues. Your contributions are greatly appreciated!
+## Installation
+[Add installation instructions here]
 
 ## License
-
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
-
----
-
-Make sure to customize the sections further based on specific details of your implementation, such as any additional setup requirements or unique functionality offered by your project.
+[Add license information here]
