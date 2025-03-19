@@ -15,6 +15,15 @@ YandexMap is a powerful cross-platform mapping solution built with KotlinMultipl
 
 ## Platform-Specific Implementation
 
+## Clustering
+The library includes built-in clustering support, automatically grouping nearby markers for improved performance and visual clarity when dealing with large datasets.
+
+## Requirements
+- iOS 13.0+
+- Android API level 21+
+- Kotlin 1.8.0+
+
+## Installation
 ### iOS
 Seamlessly integrates with iOS using UIKitView, providing native performance and feel:
 ```swift
@@ -55,16 +64,15 @@ AndroidView(
     }
 ```
 
-## Clustering
-The library includes built-in clustering support, automatically grouping nearby markers for improved performance and visual clarity when dealing with large datasets.
+## Contributions
 
-## Requirements
-- iOS 13.0+
-- Android API level 21+
-- Kotlin 1.8.0+
+Feel free to contribute to this project by submitting pull requests or issues. Your contributions are greatly appreciated!
 
-## Installation
-[Add installation instructions here]
 
 ## License
-[Add license information here]
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
+
+---
+
+Make sure to customize the sections further based on specific details of your implementation, such as any additional setup requirements or unique functionality offered by your project.
