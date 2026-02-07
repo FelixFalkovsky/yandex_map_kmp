@@ -10,9 +10,11 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.viewinterop.AndroidView
 import com.example.yandex_map_kmp.map.MapController
+import com.example.yandex_map_kmp.moko.PlaceMarkModel
+import kotlinx.coroutines.flow.Flow
 
 @Composable
-actual fun MapContent(places: List<PlaceMarkModel>, userLocation: Boolean) {
+actual fun MapContent(places: List<PlaceMarkModel>, userLocation: Flow<Unit?>) {
 
     val isLocationEnabled by remember { mutableStateOf(false) }
     var mapController by remember { mutableStateOf<MapController?>(null) }

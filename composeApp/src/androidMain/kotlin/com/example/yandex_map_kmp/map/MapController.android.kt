@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.activity.result.ActivityResultLauncher
 import androidx.core.content.PermissionChecker
 import androidx.core.content.PermissionChecker.checkSelfPermission
-import com.example.yandex_map_kmp.PlaceMarkModel
+import com.example.yandex_map_kmp.moko.PlaceMarkModel
 import com.yandex.mapkit.Animation
 import com.yandex.mapkit.MapKit
 import com.yandex.mapkit.MapKitFactory

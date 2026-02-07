@@ -67,14 +67,12 @@ kotlin {
 }
 
 android {
-    namespace = "org.company.app"
-    compileSdk = 34
+    namespace = "org.yandex_map.app"
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 24
-        targetSdk = 34
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        targetSdk = 36
     }
     sourceSets["main"].apply {
         manifest.srcFile("src/androidMain/AndroidManifest.xml")

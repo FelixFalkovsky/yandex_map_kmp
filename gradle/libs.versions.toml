@@ -1,29 +1,29 @@
 [versions]
 
 # Plugin
-plugin-android = "8.2.2"
-buildConfig = "4.1.1"
+plugin-android = "9.0.0"
+buildConfig = "6.0.7"
 
 # Multiplatform
-kotlin = "2.0.0"
+kotlin = "2.3.10"
 coroutines = "1.7.3"
-libres = "1.2.2"
+libres = "1.2.4"
 
 #Compose
-jb-compose = "1.6.11"
+jb-compose = "1.10.0"
 
 #YandexMapsMobile
-yandexMapsMobile = "4.6.1-lite"
-runtimeAndroid = "1.6.8"
+yandexMapsMobile = "4.6.1-navikit"
+runtimeAndroid = "1.10.2"
 
 # ArkIvanov
-arkivanov-decompose = "3.0.0"
-arkivanov-essenty = "2.0.0"
+arkivanov-decompose = "3.4.0"
+arkivanov-essenty = "2.5.0"
 
 #AndroidX
-compose = "1.6.11"
-material3 = "1.2.1"
-androidx-activityCompose = "1.9.0"
+compose = "1.10.2"
+material3 = "1.4.0"
+androidx-activityCompose = "1.12.3"
 runtimeDesktop = "1.6.8"
 
 [libraries]
@@ -59,6 +59,6 @@ multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotl
 serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 libres = { id = "io.github.skeptick.libres", version.ref = "libres" }
-compose = { id = "org.jetbrains.compose", version.ref = "compose" }
+compose = { id = "org.jetbrains.compose", version.ref = "jb-compose" }
 cocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
 buildConfig = { id = "com.github.gmazzo.buildconfig", version.ref = "buildConfig" }
