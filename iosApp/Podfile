@@ -1,7 +1,8 @@
+# Официальная документация: https://yandex.com/maps-api/docs/mapkit/ios/generated/getting_started.html
+# В CocoaPods Trunk доступна 4.6.1-lite; 4.30.0-lite в доке может требовать отдельный source.
 target 'YandexMapKMP' do
   use_frameworks!
   platform :ios, '16.0'
   pod 'composeApp', :path => '../composeApp'
   pod 'YandexMapsMobile', '4.6.1-lite'
-
 end

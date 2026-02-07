@@ -68,11 +68,11 @@ kotlin {
 
 android {
     namespace = "org.yandex_map.app"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 24
-
+        targetSdk = 36
     }
     sourceSets["main"].apply {
         manifest.srcFile("src/androidMain/AndroidManifest.xml")

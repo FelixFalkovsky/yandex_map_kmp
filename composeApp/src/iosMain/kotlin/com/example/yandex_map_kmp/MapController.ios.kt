@@ -166,7 +166,7 @@ class MapController : UIView(frame = CGRectMake(.0, .0, .0, .0)),
     }
 
     override fun onClusterTapWithCluster(cluster: YMKCluster): Boolean {
-        val places = cluster.placemarks as List<YMKPlacemarkMapObject>
+        val places = cluster.placemarks.filterIsInstance<YMKPlacemarkMapObject>()
         val placesIDs = places.map { (it.userData as PlaceMarkModel).id }.toIntArray()
         clusterClick?.invoke(placesIDs)
         isUserLocationDisable?.invoke(false)

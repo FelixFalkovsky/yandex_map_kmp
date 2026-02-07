@@ -12,8 +12,18 @@
 		1E921F7D2C32ADC9000728AA /* LifecycleHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E921F7C2C32ADC9000728AA /* LifecycleHolder.swift */; };
 		1E921F7F2C32AE93000728AA /* ComposeViewControllerToSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E921F7E2C32AE93000728AA /* ComposeViewControllerToSwiftUI.swift */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
-		FD1AFADF15BDB05CDE640AF2 /* Pods_YandexMapKMP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D2542D0FE40C7E6EF4AD617 /* Pods_YandexMapKMP.framework */; };
+		520EDAD2FB92282F1052A4C1 /* Pods_YandexMapKMP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4810DEE7B51B31F8252EB05 /* Pods_YandexMapKMP.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		PROXYPODSYANDEX0011223344556677 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = PODSPROJREF0011223344556677 /* Pods.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CCC2DB878D2A31CFA54A6FAC94F84A6;
+			remoteInfo = "Pods-YandexMapKMP";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		058557BA273AAA24004C7B11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -23,11 +33,10 @@
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* YandexMapKMP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YandexMapKMP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		89920EDC16A5DE2274DB2626 /* Pods-YandexMapKMP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YandexMapKMP.release.xcconfig"; path = "Target Support Files/Pods-YandexMapKMP/Pods-YandexMapKMP.release.xcconfig"; sourceTree = "<group>"; };
-		8D2542D0FE40C7E6EF4AD617 /* Pods_YandexMapKMP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YandexMapKMP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4AF56D37E7552B4CD1971AC /* Pods-YandexMapKMP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YandexMapKMP.debug.xcconfig"; path = "Target Support Files/Pods-YandexMapKMP/Pods-YandexMapKMP.debug.xcconfig"; sourceTree = "<group>"; };
-		E8ECC05D3A76F73401BCE173 /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.release.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
-		FED89CA012C05FE46F99C37A /* Pods-iosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.debug.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.debug.xcconfig"; sourceTree = "<group>"; };
+		A4810DEE7B51B31F8252EB05 /* Pods_YandexMapKMP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YandexMapKMP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A91906E9D040817EDF0BF40C /* Pods-YandexMapKMP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YandexMapKMP.release.xcconfig"; path = "Target Support Files/Pods-YandexMapKMP/Pods-YandexMapKMP.release.xcconfig"; sourceTree = "<group>"; };
+		C015AECBE918F860761A1763 /* Pods-YandexMapKMP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YandexMapKMP.debug.xcconfig"; path = "Target Support Files/Pods-YandexMapKMP/Pods-YandexMapKMP.debug.xcconfig"; sourceTree = "<group>"; };
+		PODSPROJREF0011223344556677 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD1AFADF15BDB05CDE640AF2 /* Pods_YandexMapKMP.framework in Frameworks */,
+				520EDAD2FB92282F1052A4C1 /* Pods_YandexMapKMP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,13 +59,20 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		1D770D48BCD95C3955F4534B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4810DEE7B51B31F8252EB05 /* Pods_YandexMapKMP.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2761EB1779D41AD078DF4F96 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FED89CA012C05FE46F99C37A /* Pods-iosApp.debug.xcconfig */,
-				E8ECC05D3A76F73401BCE173 /* Pods-iosApp.release.xcconfig */,
-				A4AF56D37E7552B4CD1971AC /* Pods-YandexMapKMP.debug.xcconfig */,
-				89920EDC16A5DE2274DB2626 /* Pods-YandexMapKMP.release.xcconfig */,
+				PODSPROJREF0011223344556677 /* Pods.xcodeproj */,
+				C015AECBE918F860761A1763 /* Pods-YandexMapKMP.debug.xcconfig */,
+				A91906E9D040817EDF0BF40C /* Pods-YandexMapKMP.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -67,7 +83,7 @@
 				7555FF7D242A565900829871 /* iosApp */,
 				7555FF7C242A565900829871 /* Products */,
 				2761EB1779D41AD078DF4F96 /* Pods */,
-				9F5508A2E9FBFDDA1CCB4492 /* Frameworks */,
+				1D770D48BCD95C3955F4534B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,14 +108,6 @@
 			path = iosApp;
 			sourceTree = "<group>";
 		};
-		9F5508A2E9FBFDDA1CCB4492 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8D2542D0FE40C7E6EF4AD617 /* Pods_YandexMapKMP.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,15 +115,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7555FFA5242A565B00829871 /* Build configuration list for PBXNativeTarget "YandexMapKMP" */;
 			buildPhases = (
-				759B50E7EAEE71D2054A2B3B /* [CP] Check Pods Manifest.lock */,
+				B60845A2860572DD8DFC61DF /* [CP] Check Pods Manifest.lock */,
 				7555FF77242A565900829871 /* Sources */,
 				7555FF79242A565900829871 /* Resources */,
 				6B08AEDEFC5A2E294603C769 /* Frameworks */,
-				3E4AEB953268016E5E8092E6 /* [CP] Copy Pods Resources */,
+				88DC826F0BE66477ED186A8B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DEPPODSYANDEX0011223344556677 /* PBXTargetDependency */,
 			);
 			name = YandexMapKMP;
 			productName = iosApp;
@@ -149,6 +158,11 @@
 			mainGroup = 7555FF72242A565900829871;
 			productRefGroup = 7555FF7C242A565900829871 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProjectRef = PODSPROJREF0011223344556677 /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				7555FF7A242A565900829871 /* YandexMapKMP */,
@@ -169,7 +183,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3E4AEB953268016E5E8092E6 /* [CP] Copy Pods Resources */ = {
+		88DC826F0BE66477ED186A8B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -186,7 +200,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YandexMapKMP/Pods-YandexMapKMP-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		759B50E7EAEE71D2054A2B3B /* [CP] Check Pods Manifest.lock */ = {
+		B60845A2860572DD8DFC61DF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -222,6 +236,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DEPPODSYANDEX0011223344556677 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			targetProxy = PROXYPODSYANDEX0011223344556677 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		7555FFA3242A565B00829871 /* Debug */ = {
@@ -342,7 +363,7 @@
 		};
 		7555FFA6242A565B00829871 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4AF56D37E7552B4CD1971AC /* Pods-YandexMapKMP.debug.xcconfig */;
+			baseConfigurationReference = C015AECBE918F860761A1763 /* Pods-YandexMapKMP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -371,7 +392,7 @@
 		};
 		7555FFA7242A565B00829871 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89920EDC16A5DE2274DB2626 /* Pods-YandexMapKMP.release.xcconfig */;
+			baseConfigurationReference = A91906E9D040817EDF0BF40C /* Pods-YandexMapKMP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
