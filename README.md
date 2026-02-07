@@ -1,5 +1,3 @@
-# yandex_map_kmp
-
 # YandexMap for KotlinMultiplatform
 
 ## Overview
