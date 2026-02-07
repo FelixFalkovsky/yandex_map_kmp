@@ -65,3 +65,6 @@ freeline_project_description.json
 
 # KMM
 *.xcuserstate
+
+# Kotlin Gradle plugin cache / metadata (commonizer, transformed libs)
+.kotlin/
